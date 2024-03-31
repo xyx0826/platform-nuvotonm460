@@ -1,0 +1,65 @@
+{
+    "name": "nuvotonm460",
+    "title": "Nuvoton M460",
+    "description": "The Nuvoton M460 familiy provides up to 200 MHz core frequency, 1.7 V~3.6 V operating voltage, -40°C to 85°C/105°C operating temperature, up to 1024 KB of Flash memory, up to 512 KB of SRAM, and certified IEC60730-1 Class B Software Test Library (STL). Targeted for IoT gateway, industrial control, telecom and data center applications.",
+    "homepage": "https://www.nuvoton.com/products/microcontrollers/arm-cortex-m4-mcus/",
+    "license": "Apache-2.0",
+    "keywords": [
+        "dev-platform",
+        "ARM",
+        "Cortex-M",
+        "Nuvoton",
+        "M463",
+        "M467"
+    ],
+    "engines": {
+        "platformio": "^5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xyx0826/platform-nuvotonm460.git"
+    },
+    "version": "1.0.0",
+    "frameworks": {
+        "cmsis": {
+            "package": "framework-cmsis",
+            "script": "builder/frameworks/cmsis.py",
+            "description": "The ARM Cortex Microcontroller Software Interface Standard (CMSIS) is a vendor-independent hardware abstraction layer for the Cortex-M processor series and specifies debugger interfaces. The CMSIS enables consistent and simple software interfaces to the processor for interface peripherals, real-time operating systems, and middleware. It simplifies software re-use, reducing the learning curve for new microcontroller developers and cutting the time-to-market for devices",
+            "homepage": "https://developer.arm.com/tools-and-software/embedded/cmsis",
+            "title": "CMSIS"
+        }
+    },
+    "packages": {
+        "toolchain-gccarmnoneeabi": {
+            "type": "toolchain",
+            "owner": "platformio",
+            "version": ">=1.60301.0,<1.80000.0",
+            "optionalVersions": [
+                "~1.60301.0",
+                "~1.80201.0",
+                "~1.90201.0",
+                "~1.120301.0"
+            ]
+        },
+        "framework-cmsis": {
+            "type": "framework",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~2.50501.0",
+            "optionalVersions": [
+                "~2.50900.0"
+            ]
+        },
+        "framework-cmsis-m460": {
+            "type": "framework",
+            "optional": true,
+            "owner": "xyx0826",
+            "version": "~3.0.2"
+        },
+        "tool-openocd-nuvoton": {
+            "type": "uploader",
+            "owner": "xyx0826",
+            "version": "~0.12.1556"
+        }
+    }
+}
